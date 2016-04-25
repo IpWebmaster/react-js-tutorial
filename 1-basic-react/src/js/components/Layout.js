@@ -6,10 +6,15 @@ export default class Layout extends React.Component {
   state = {
     title: 'Wellcome'
   }
+
+  changeTitle = (title) => {
+    this.setState({ title });
+  }
+
   render() {
     return (
       <div>
-        <Header title={this.state.title} />
+        <Header changeTitle={this.changeTitle} title={this.state.title} />
         <Footer />
       </div>
     );
